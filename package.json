@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-sample",
+  "version": "1.0.0",
+  "description": "Sample noode.js application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r14r/nodejs-sample.git"
+  },
+  "keywords": [
+    "nodejs",
+    "angluarjs",
+    "express",
+    "grunt"
+  ],
+  "author": "Ralph Goestenmeier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r14r/nodejs-sample/issues"
+  },
+  "homepage": "https://github.com/r14r/nodejs-sample#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1"
+  }
+}
