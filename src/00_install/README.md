@@ -19,7 +19,7 @@ Best way to install and update Node.js is to use the Node Version Manager script
 - Check node.js version
 ```node --version```
 
-# Setup environmenet
+# Setup environment
 
 # Setup project environment
 
