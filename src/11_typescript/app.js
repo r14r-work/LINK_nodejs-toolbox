@@ -23,7 +23,7 @@ var MyAppComponent = (function () {
         }),
         angular2_1.View({
             template: '<h1>Hello {{ name }}</h1>'
-        }), 
+        }),
         __metadata('design:paramtypes', [])
     ], MyAppComponent);
     return MyAppComponent;

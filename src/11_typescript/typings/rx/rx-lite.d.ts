@@ -1,4 +1,4 @@
-﻿// DefinitelyTyped: partial
+// DefinitelyTyped: partial
 
 // This file contains common part of defintions for rx.d.ts and rx.lite.d.ts
 // Do not include the file separately.
@@ -291,7 +291,7 @@ declare module Rx {
 		do(onNext?: (value: T) => void, onError?: (exception: any) => void, onCompleted?: () => void): Observable<T>;
 		doAction(onNext?: (value: T) => void, onError?: (exception: any) => void, onCompleted?: () => void): Observable<T>;	// alias for do
 		tap(onNext?: (value: T) => void, onError?: (exception: any) => void, onCompleted?: () => void): Observable<T>;	// alias for do
-		
+
 		doOnNext(onNext: (value: T) => void, thisArg?: any): Observable<T>;
 		doOnError(onError: (exception: any) => void, thisArg?: any): Observable<T>;
 		doOnCompleted(onCompleted: () => void, thisArg?: any): Observable<T>;
@@ -336,30 +336,30 @@ declare module Rx {
 		selectConcat<R>(sequence: Observable<R>): Observable<R>;
 
 		/**
-		*  Projects each element of an observable sequence into a new sequence of observable sequences by incorporating the element's index and then 
+		*  Projects each element of an observable sequence into a new sequence of observable sequences by incorporating the element's index and then
 		*  transforms an observable sequence of observable sequences into an observable sequence producing values only from the most recent observable sequence.
 		* @param selector A transform function to apply to each source element; the second parameter of the function represents the index of the source element.
 		* @param [thisArg] Object to use as this when executing callback.
-		* @returns An observable sequence whose elements are the result of invoking the transform function on each element of source producing an Observable of Observable sequences 
+		* @returns An observable sequence whose elements are the result of invoking the transform function on each element of source producing an Observable of Observable sequences
 		*  and that at any point in time produces the elements of the most recent inner observable sequence that has been received.
 		*/
 		selectSwitch<TResult>(selector: (value: T, index: number, source: Observable<T>) => Observable<TResult>, thisArg?: any): Observable<TResult>;
 		/**
-		*  Projects each element of an observable sequence into a new sequence of observable sequences by incorporating the element's index and then 
+		*  Projects each element of an observable sequence into a new sequence of observable sequences by incorporating the element's index and then
 		*  transforms an observable sequence of observable sequences into an observable sequence producing values only from the most recent observable sequence.
 		* @param selector A transform function to apply to each source element; the second parameter of the function represents the index of the source element.
 		* @param [thisArg] Object to use as this when executing callback.
-		* @returns An observable sequence whose elements are the result of invoking the transform function on each element of source producing an Observable of Observable sequences 
+		* @returns An observable sequence whose elements are the result of invoking the transform function on each element of source producing an Observable of Observable sequences
 		*  and that at any point in time produces the elements of the most recent inner observable sequence that has been received.
 		*/
 		flatMapLatest<TResult>(selector: (value: T, index: number, source: Observable<T>) => Observable<TResult>, thisArg?: any): Observable<TResult>;	// alias for selectSwitch
 		/**
-		*  Projects each element of an observable sequence into a new sequence of observable sequences by incorporating the element's index and then 
+		*  Projects each element of an observable sequence into a new sequence of observable sequences by incorporating the element's index and then
 		*  transforms an observable sequence of observable sequences into an observable sequence producing values only from the most recent observable sequence.
 		* @param selector A transform function to apply to each source element; the second parameter of the function represents the index of the source element.
 		* @param [thisArg] Object to use as this when executing callback.
 		* @since 2.2.28
-		* @returns An observable sequence whose elements are the result of invoking the transform function on each element of source producing an Observable of Observable sequences 
+		* @returns An observable sequence whose elements are the result of invoking the transform function on each element of source producing an Observable of Observable sequences
 		*  and that at any point in time produces the elements of the most recent inner observable sequence that has been received.
 		*/
 		switchMap<TResult>(selector: (value: T, index: number, source: Observable<T>) => TResult, thisArg?: any): Observable<TResult>;	// alias for selectSwitch
@@ -383,7 +383,7 @@ declare module Rx {
 		* Converts an existing observable sequence to an ES6 Compatible Promise
 		* @example
 		* var promise = Rx.Observable.return(42).toPromise(RSVP.Promise);
-		* 
+		*
 		* // With config
 		* Rx.config.Promise = RSVP.Promise;
 		* var promise = Rx.Observable.return(42).toPromise();
@@ -472,7 +472,7 @@ declare module Rx {
 
 		/**
 		*  Converts an iterable into an Observable sequence
-		*  
+		*
 		* @example
 		*  var res = Rx.Observable.fromIterable(new Map());
 		*  var res = Rx.Observable.fromIterable(function* () { yield 42; });
@@ -485,7 +485,7 @@ declare module Rx {
 
 		/**
 		*  Converts an iterable into an Observable sequence
-		*  
+		*
 		* @example
 		*  var res = Rx.Observable.fromIterable(new Map());
 		*  var res = Rx.Observable.fromIterable(new Set(), Rx.Scheduler.timeout);
@@ -499,7 +499,7 @@ declare module Rx {
 
 		/**
 		*  This method creates a new Observable instance with a variable number of arguments, regardless of number or type of the arguments.
-		* 
+		*
 		* @example
 		*  var res = Rx.Observable.of(1, 2, 3);
 		* @since 2.2.28
@@ -508,7 +508,7 @@ declare module Rx {
 		of<T>(...values: T[]): Observable<T>;
 
 		/**
-		*  This method creates a new Observable instance with a variable number of arguments, regardless of number or type of the arguments. 
+		*  This method creates a new Observable instance with a variable number of arguments, regardless of number or type of the arguments.
 		* @example
 		*  var res = Rx.Observable.ofWithScheduler(Rx.Scheduler.timeout, 1, 2, 3);
 		* @since 2.2.28

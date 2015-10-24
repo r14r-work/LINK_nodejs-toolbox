@@ -1,0 +1,15 @@
+#!/bin/bash
+
+SELF="${0##*/}"
+HERE="$(cd "${0%/*}" && pwd)"
+
+NVM_DIR="$HERE/opt/nvm"
+NVM_VERSION=v0.29.0
+
+export NVM_DIR
+
+echo "Install nvm in $NVM_DIR"
+
+LINK=https://raw.githubusercontent.com/creationix/nvm/$NVM_VERSION/install.sh
+
+wget -qO- $LINK | tee install.nvm.sh | bash

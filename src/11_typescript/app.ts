@@ -15,7 +15,7 @@ import {Component, View, bootstrap} from 'angular2/angular2';
 // Component controller
 class MyAppComponent {
   name: string;
-  
+
   constructor() {
     this.name = 'Alice';
   }
